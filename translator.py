@@ -17,6 +17,25 @@ class MorseCode:
         
     # def format_letters(self):
     #     return {k: v for k, v in sorted(self.letters.items(), key=lambda item: item[1])}
+    def valid(self, message: str) -> bool:
+        """The method checks whether the input message can be encoded or decoded
+
+        Args:
+            message (str): the string to encode or decode
+
+        Returns:
+            bool: True or False flag for whether the input is usuable
+        """
+        try:
+            message = message.upper()
+        except AttributeError:
+            pass
+        check_list = [False for i in message if i not in self.letters.keys() and self.numbers.keys()]
+        if len(check_list) != 0:
+            return False
+        else:
+            return True
+        
     def translate(self, message: str) -> str:
         """a simple morse code translator which takes an input string and prints the morse code translation
 
