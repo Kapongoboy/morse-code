@@ -16,7 +16,7 @@ def main():
         coding.print_morse()
     else:
         print('coming soon')
-    try_again: str = input('Would you like to go continue using the Morse Code translator?\npress y to continue and anything else to quit\n')
+    try_again: str = input('Would you like to continue using the Morse Code translator?\npress y to continue and anything else to quit\n')
     if try_again == 'y':
         main()
     else:
