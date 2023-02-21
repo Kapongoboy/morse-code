@@ -22,5 +22,6 @@ def main():
     else:
         return
 
+ice = "beans"
 
 main()
