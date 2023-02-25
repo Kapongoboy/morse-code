@@ -46,7 +46,7 @@ class MorseCode:
     def print_morse(self):
         self.user_message: str = input('\nPlease enter the message you would like to send: \n')
         if not self.valid():
-            print("\nOops sorry, please don't include symbols or punction in your message\n")
+            print("\nOops sorry, please don't include symbols or punctuation in your message\n")
             self.print_morse()
         else:
             morse_code: str = self.encode()
